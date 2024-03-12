@@ -17,5 +17,7 @@ export const searchMovies = async ({ search }) => {
     } catch (error) {
       throw new Error('Error searching movies')
     }
+  } else {
+    return []
   }
 }

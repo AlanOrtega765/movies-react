@@ -8,7 +8,7 @@ function MoviesWithResult ({ movies }) {
   return (
     movies.map(movie => (
       <article className='card' key={movie.id}>
-        <img className='card__image' src={imageUrl(movie.image)} alt={movie.title} />
+        <img className={movies.length === 1 ? 'card__image one-card' : 'card__image'} src={imageUrl(movie.image)} alt={movie.title} />
         <strong className='card__title'>{movie.title} ({movie.year.slice(0, 4)})</strong>
       </article>
     ))
